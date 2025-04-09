@@ -1,15 +1,13 @@
 <script setup>
 import BodyMassIndexForm from './components/BodyMassIndexForm.vue'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
- const height = ref("Height in meters")
- const weight = ref("Weight in kilograms")
+const calculate = ref('')
 
-const calculate = ref(0)
 
 function calculateBmi(height, weight) {
-   calculate.value = weight.value / ( height.value * height.value )
-  console.log(calculate.value)
+  let formattedNumber = weight / ( height * height )
+  calculate.value = formattedNumber.toFixed(2)
 }
 
 </script>

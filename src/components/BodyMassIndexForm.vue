@@ -14,7 +14,7 @@ const emit = defineEmits( [
 
 
 
-function choiceMade(height, weight) {
+function choiceMade() {
   emit('stats-entered', height.value, weight.value)
 }
 
