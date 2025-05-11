@@ -40,7 +40,7 @@ export default {
     <label v-if="isMetric">Weight (kg):</label>
     <label v-else>Weight (lbs):</label>
     <input type="number" v-model="weight" />
-<br/>
+<br/><br/>
     <button @click="calculateBMI">Calculate</button>
   </div>
 
