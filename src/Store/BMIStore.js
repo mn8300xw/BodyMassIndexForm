@@ -3,15 +3,16 @@ import {ref} from 'vue'
 
 export const useBMIStore = defineStore('bmiCalculator', () => {
 
-    const bmi = ref(calculateBmi)
 
-    function calculateBmi(height, weight) {
-       return weight / (height * height)
-    }
+    const bmi = ref(null);
 
+    const calculateBMI = ({ height, weight }) => {
+        bmi.value = weight / (height * height);
+    };
 
-  return {
-        calculateBmi,
-      bmi
-    }
+    return {
+        bmi,
+        calculateBMI
+    };
+
 })
